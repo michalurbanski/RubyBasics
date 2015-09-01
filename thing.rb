@@ -1,24 +1,15 @@
 # thing parent class
 
 class Thing
+  attr_accessor :name, :description
+
   def initialize(name, description)
     @name = name
     @description = description
   end
 
-  def get_name
-    @name
+  def to_s
+    "(Thing.to_s):: Then name is #{@name}, description is #{@description}"
   end
 
-  def set_name(name)
-    @name = name
-  end
-
-  def get_description
-    @description
-  end
-
-  def set_description(description)
-    @description = description
-  end
 end
