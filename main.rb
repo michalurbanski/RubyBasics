@@ -8,3 +8,6 @@ puts "name: #{treasure.name}"
 
 thing = Thing.new('thing', 'thing description')
 puts thing.to_s
+
+# 2 things have been created up until now - show things counter
+puts "Things created counter is: #{Thing.get_things_num}"
