@@ -5,6 +5,7 @@ require_relative 'Treasure'
 
 treasure = Treasure.new('test', 'this is long description', 1)
 puts "name: #{treasure.name}"
+puts treasure.to_s
 
 thing = Thing.new('thing', 'thing description')
 puts thing.to_s

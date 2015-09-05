@@ -8,4 +8,8 @@ class Treasure < Thing
     super(name, description) # call base class
     @value = value
   end
+
+  def to_s
+    self.inspect # prints all variables with their value
+  end
 end
