@@ -17,3 +17,17 @@ array.each do |i|
 end
 
 # Standard while loop
+counter = 0
+
+puts('While loop printing values')
+while counter < 10 do
+  puts(counter)
+  counter+=1
+end
+
+puts('Another syntax for while loop which works like do while loop')
+counter = 0
+begin
+  puts(counter)
+  counter+=1
+end while counter < 0
