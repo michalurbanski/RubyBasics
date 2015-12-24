@@ -31,3 +31,14 @@ begin
   puts(counter)
   counter+=1
 end while counter < 0
+
+# until loop - specific for ruby
+# until = while not (execute until value is ...)
+
+counter = 10
+puts("Until loop will not execute when counter is set to #{counter}")
+until counter == 10 do puts(counter) end
+
+puts('Another way to write the same condition')
+puts(counter) until counter == 10
+
