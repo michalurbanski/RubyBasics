@@ -38,3 +38,27 @@ puts(Errno.constants)
 
 
 # Ruby has also concept of retry - below example
+retryCount = 0
+begin
+  retryCount += 1
+  x = 1/0
+rescue Exception => ex
+  puts("Exception with message: #{ex} - caught")
+  if(retryCount < 3)
+    retry # once again executes begin block
+  end
+ensure
+  puts("Execution finished after #{retryCount} retries")
+end
+
+# Raising an exception
+begin
+  x = 1/0
+rescue Exception => ex
+  puts("Printing backtrace...")
+  puts
+  puts(ex.backtrace) # prints backtrace for this exception
+  puts("Exception caught and logged")
+  raise ZeroDivisionError.new("Custom message for an exception")
+end
+
